@@ -1,0 +1,58 @@
+REM_BLOCK
+  Title: Anti-AFK-USB
+  Author: github.com/infomanc3r
+  Description: This script will automatically generate keyboard input within specified parameters
+               Allows the user to avoid AFK penalties or other inactivity based shutdowns
+               Keyboard emulation prevents most software/macro detection
+               Initial config was set up to avoid AFK disconnect in Sea of Thieves lol
+               Keypresses and durations can be modified to suit your needs
+END_REM
+
+
+ATTACKMODE HID
+
+BUTTON_DEF
+    STOP_PAYLOAD
+END_BUTTON
+
+DELAY 500
+
+VAR $DIRECTION = 1
+
+WHILE TRUE
+
+    $_RANDOM_MIN = 750
+    $_RANDOM_MAX = 1750
+    
+    IF ( $DIRECTION == 1 ) THEN
+        HOLD W
+        DELAY $_RANDOM_INT
+        RELEASE W
+    END_IF
+    
+    IF ( $DIRECTION == 2 ) THEN
+        HOLD A
+        DELAY $_RANDOM_INT
+        RELEASE A
+    END_IF
+
+    IF ( $DIRECTION == 3 ) THEN
+        HOLD S
+        DELAY $_RANDOM_INT
+        RELEASE S
+    END_IF
+    
+    IF ( $DIRECTION == 4 ) THEN
+        HOLD D
+        DELAY $_RANDOM_INT
+        RELEASE D
+    END_IF
+
+    DELAY $_RANDOM_INT * 40
+
+    $_RANDOM_MIN = 1
+    $_RANDOM_MAX = 4
+
+    $DIRECTION = $_RANDOM_INT
+
+END_WHILE
