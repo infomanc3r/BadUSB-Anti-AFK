@@ -4,7 +4,7 @@ REM_BLOCK
   Description: This script will automatically generate keyboard input within specified parameters
                Allows the user to avoid AFK penalties or other inactivity based shutdowns
                Keyboard emulation prevents most software/macro detection
-               Initial config was set up to avoid AFK disconnect in Sea of Thieves lol
+               Initial config was set up to avoid AFK disconnect in Sea of Thieves (lol)
                Keypresses and durations can be modified to suit your needs
 END_REM
 
